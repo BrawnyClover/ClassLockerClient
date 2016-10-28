@@ -5,17 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassLockerClientAsync2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Class Locker Client" Height="350" Width="525" Foreground="Black" Background="#FFB6B6B6" SizeToContent="WidthAndHeight" FontFamily="Consolas">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
     <Grid>
-        <Button x:Name="LockerButton" Content="is Locked?" HorizontalAlignment="Left" Height="79" Margin="181,104,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Click="LockerButton_Click"/>
-        <TextBlock x:Name="StudentData" HorizontalAlignment="Left" Height="67" Margin="181,219,0,0" TextWrapping="Wrap" Text="Show student data" VerticalAlignment="Top" Width="156"/>
-        <TextBlock x:Name="Condition" HorizontalAlignment="Left" Height="51" Margin="181,34,0,0" TextWrapping="Wrap" Text="Show locker condition" VerticalAlignment="Top" Width="156"/>
+        <Button x:Name="LockerButton" HorizontalAlignment="Left" Height="134" Margin="195,84,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" Click="LockerButton_Click" BorderThickness="0">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Ivory"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock x:Name="StudentData" HorizontalAlignment="Left" Height="50" Margin="162,231,0,0" TextWrapping="Wrap" Text="Show student data" VerticalAlignment="Top" Width="190" FontSize="18" FontFamily="Yu Gothic UI Semilight" TextAlignment="Center"/>
+        <TextBlock x:Name="Condition" HorizontalAlignment="Left" Height="50" Margin="162,34,0,0" TextWrapping="Wrap" Text="Show locker condition" VerticalAlignment="Top" Width="190" FontSize="18" FontFamily="Yu Gothic UI Semilight" TextAlignment="Center"/>
 
-        <TextBox x:Name="Message" HorizontalAlignment="Left" Height="118" Margin="359,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
-        
-        <TextBox x:Name="Errors" HorizontalAlignment="Left" Height="134" Margin="359,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="35" Margin="62,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="79"/>
+        <TextBox x:Name="Message" HorizontalAlignment="Left" Height="118" Margin="374,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" ScrollViewer.HorizontalScrollBarVisibility="Auto" IsReadOnly="True"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" BorderThickness="0" FontSize="10" Background="#FFB6B6B6" FontFamily="Malgun Gothic Semilight"/>
+
+        <TextBox x:Name="Errors" HorizontalAlignment="Left" Height="118" Margin="374,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" BorderThickness="0" FontSize="10" Background="#FFB6B6B6" FontFamily="Malgun Gothic Semilight" IsReadOnly="True"/>
 
     </Grid>
 </Window>

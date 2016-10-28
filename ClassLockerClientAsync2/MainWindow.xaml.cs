@@ -31,15 +31,28 @@ namespace ClassLockerClientAsync2
         private const int MAXSIZE = 4096;   /* 4096  */
         private string HOST = "52.78.141.159";
         private int PORT = 9999;
+        private string id = "";
+        private string passwd = "";
         Connection connector;
+        Login loginPage;
+        WindowSize windowSizeControl;
+        Image img = new Image();
+        bool turn = false;
+
         public MainWindow()
         {
             InitializeComponent();
+            changeIcon();
+            Condition.TextAlignment = TextAlignment.Center;
+            windowSizeControl = new WindowSize(this);
+            loginPage = new Login(this);
             recvBuffer = new byte[MAXSIZE];
             clientSock = new Socket(AddressFamily.InterNetwork,
                                           SocketType.Stream, ProtocolType.Tcp);
             connector = new Connection(this, clientSock, cbSock, recvBuffer);
             this.DoInit();
+
+            loginPage.Show();
         }
         public string getHost()
         {
@@ -49,6 +62,36 @@ namespace ClassLockerClientAsync2
         {
             return this.PORT;
         }
+        public void setId(string id)
+        {
+            this.id = id;
+        }
+        public void setPswd(string passwd)
+        {
+            this.passwd = passwd;
+        }
+
+        public void login()
+        {
+            String sendText = "L";
+            int len = 10000 + id.Length;
+            sendText += len.ToString().Substring(1, 4);
+            sendText += id;
+            len = 10000 + passwd.Length;
+            sendText += len.ToString().Substring(1, 4);
+            sendText += passwd;
+            connector.BeginSend(sendText);
+            cbSock.Receive(recvBuffer);
+            if (recvBuffer.ToString() == "S")
+            {
+                loginPage.Close();
+            }
+            else
+            {
+                loginPage.status.Text = "Login Failed...";
+            }
+        }
+
         public void DoInit()
         {
             clientSock = new Socket(AddressFamily.InterNetwork,
@@ -60,7 +103,36 @@ namespace ClassLockerClientAsync2
         {
             char[] condition = {'B'};
             connector.BeginSend(condition[nowCondition].ToString());
-            //Receive();
+            //Receive();  
+            changeIcon();
+        }
+        public void changeIcon()
+        {
+            Button btn = LockerButton;
+             
+            if (turn == true)
+            {
+                BitmapImage bmp = new BitmapImage();
+                bmp.BeginInit();
+                Uri u = new Uri("C:\\Users\\sonbi\\Desktop\\ClassLockerClientAsync2\\padlock.png", UriKind.RelativeOrAbsolute);
+                bmp.UriSource = u;
+                ImageBrush i = new ImageBrush();
+                i.ImageSource = bmp;
+                btn.Background = i;
+                bmp.EndInit();
+            }
+            else
+            {
+                BitmapImage bmp = new BitmapImage();
+                bmp.BeginInit();
+                Uri u = new Uri("C:\\Users\\sonbi\\Desktop\\ClassLockerClientAsync2\\unlock.png", UriKind.RelativeOrAbsolute);
+                bmp.UriSource = u;
+                ImageBrush i = new ImageBrush();
+                i.ImageSource = bmp;
+                btn.Background = i;
+                bmp.EndInit();
+            }
+            turn = !turn;
         }
     }
 }

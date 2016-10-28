@@ -12,3 +12,5 @@ C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug
 C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug\ClassLockerClientAsync2.csproj.GenerateResource.Cache
 C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug\ClassLockerClientAsync2.exe
 C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug\ClassLockerClientAsync2.pdb
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug\Login.g.cs
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Debug\Login.baml
