@@ -1,0 +1,16 @@
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\bin\Release\ClassLockerClientAsync2.exe.config
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\bin\Release\ClassLockerClientAsync2.exe
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\bin\Release\ClassLockerClientAsync2.pdb
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.csprojResolveAssemblyReference.cache
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\Login.g.cs
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\MainWindow.g.cs
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\App.g.cs
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2_MarkupCompile.cache
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2_MarkupCompile.lref
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\Login.baml
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\MainWindow.baml
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.g.resources
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.Properties.Resources.resources
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.csproj.GenerateResource.Cache
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.exe
+C:\Users\sonbi\Desktop\ClassLockerClientAsync2\ClassLockerClientAsync2\obj\Release\ClassLockerClientAsync2.pdb

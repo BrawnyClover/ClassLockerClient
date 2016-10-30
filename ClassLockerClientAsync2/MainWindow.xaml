@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassLockerClientAsync2"
         mc:Ignorable="d"
-        Title="Class Locker Client" Height="350" Width="525" Foreground="Black" Background="#FFB6B6B6" SizeToContent="WidthAndHeight" FontFamily="Consolas">
+        Title="Class Locker Client" Height="341.334" Width="546.667" Foreground="Black" SizeToContent="WidthAndHeight" FontFamily="Consolas">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/background.jpg"/>
+    </Window.Background>
     <Window.Effect>
         <DropShadowEffect/>
     </Window.Effect>
     <Grid>
-        <Button x:Name="LockerButton" HorizontalAlignment="Left" Height="134" Margin="195,84,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" Click="LockerButton_Click" BorderThickness="0">
+        <Button x:Name="LockerButton" HorizontalAlignment="Left" Height="134" Margin="195,84,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" Click="LockerButton_Click" BorderThickness="0" ClickMode="Press">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Ivory"/>
@@ -35,9 +38,17 @@
         <TextBlock x:Name="Condition" HorizontalAlignment="Left" Height="50" Margin="162,34,0,0" TextWrapping="Wrap" Text="Show locker condition" VerticalAlignment="Top" Width="190" FontSize="18" FontFamily="Yu Gothic UI Semilight" TextAlignment="Center"/>
 
         <TextBox x:Name="Message" HorizontalAlignment="Left" Height="118" Margin="374,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" ScrollViewer.HorizontalScrollBarVisibility="Auto" IsReadOnly="True"
-         ScrollViewer.VerticalScrollBarVisibility="Auto" BorderThickness="0" FontSize="10" Background="#FFB6B6B6" FontFamily="Malgun Gothic Semilight"/>
+         ScrollViewer.VerticalScrollBarVisibility="Auto" BorderThickness="2" FontSize="10" FontFamily="Malgun Gothic Semilight" BorderBrush="#FF4C4779">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
 
-        <TextBox x:Name="Errors" HorizontalAlignment="Left" Height="118" Margin="374,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" BorderThickness="0" FontSize="10" Background="#FFB6B6B6" FontFamily="Malgun Gothic Semilight" IsReadOnly="True"/>
+        <TextBox x:Name="Errors" HorizontalAlignment="Left" Height="118" Margin="374,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" BorderThickness="2" FontSize="10" FontFamily="Malgun Gothic Semilight" IsReadOnly="True" BorderBrush="#FF4C4779">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
 
     </Grid>
 </Window>

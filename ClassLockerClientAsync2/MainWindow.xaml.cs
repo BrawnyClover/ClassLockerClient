@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Diagnostics;
 
 namespace ClassLockerClientAsync2
 {
@@ -29,8 +30,8 @@ namespace ClassLockerClientAsync2
         private byte[] recvBuffer;
 
         private const int MAXSIZE = 4096;   /* 4096  */
-        private string HOST = "52.78.141.159";
-        private int PORT = 9999;
+        private string HOST = "127.0.0.1";//"52.78.141.159";
+        private int PORT = 4996;
         private string id = "";
         private string passwd = "";
         Connection connector;
@@ -109,12 +110,13 @@ namespace ClassLockerClientAsync2
         public void changeIcon()
         {
             Button btn = LockerButton;
-             
+            string path = System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
             if (turn == true)
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit();
-                Uri u = new Uri("C:\\Users\\sonbi\\Desktop\\ClassLockerClientAsync2\\padlock.png", UriKind.RelativeOrAbsolute);
+                
+                Uri u = new Uri(path+"\\Resources\\padlock.png", UriKind.RelativeOrAbsolute);
                 bmp.UriSource = u;
                 ImageBrush i = new ImageBrush();
                 i.ImageSource = bmp;
@@ -125,7 +127,7 @@ namespace ClassLockerClientAsync2
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit();
-                Uri u = new Uri("C:\\Users\\sonbi\\Desktop\\ClassLockerClientAsync2\\unlock.png", UriKind.RelativeOrAbsolute);
+                Uri u = new Uri(path + "\\Resources\\unlock.png", UriKind.RelativeOrAbsolute);
                 bmp.UriSource = u;
                 ImageBrush i = new ImageBrush();
                 i.ImageSource = bmp;

@@ -105,15 +105,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1-1.png" />
+    <Resource Include="Resources\background.jpg" />
+    <Resource Include="Resources\padlock.png" />
+    <Resource Include="Resources\unlock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="locked.png" />
-    <Resource Include="unlocked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="padlock.png" />
-    <Resource Include="unlock.png" />
+    <Resource Include="Resources\login-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

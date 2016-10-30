@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("padlock.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("unlock.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/login-button.png")]
 
 
